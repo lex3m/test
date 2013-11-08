@@ -26,3 +26,21 @@ INSERT INTO tbl_user (username, password, email) VALUES ('test18', 'pass18', 'te
 INSERT INTO tbl_user (username, password, email) VALUES ('test19', 'pass19', 'test19@example.com');
 INSERT INTO tbl_user (username, password, email) VALUES ('test20', 'pass20', 'test20@example.com');
 INSERT INTO tbl_user (username, password, email) VALUES ('test21', 'pass21', 'test21@example.com');
+
+--
+-- Структура таблицы `tbl_tag`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_tag` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  `frequency` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `tbl_tag`
+--
+
+INSERT INTO `tbl_tag` (`id`, `name`, `frequency`) VALUES
+(1, 'test', 1);
