@@ -38,6 +38,12 @@ If you have business inquiries or other questions, please fill out the following
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'test'); ?>
+		<?php echo $form->textField($model,'test'); ?>
+		<?php echo $form->error($model,'test'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
 		<?php echo $form->textField($model,'name'); ?>
 		<?php echo $form->error($model,'name'); ?>
