@@ -39,7 +39,7 @@ return array(
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(
-		    'showScriptName' => false, //hide index.php from url
+		    'showScriptName' => false, //hide index.php from url,
 			'urlFormat'=>'path',
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
@@ -53,12 +53,20 @@ return array(
 			'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
-		*/		
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'root',
+			'charset' => 'utf8',
+			'tablePrefix' => 'tbl_',
+		),
+		*/		
+		'db'=>array(
+			'connectionString' => 'mysql:host=localhost;dbname=blogoweb',
+			'emulatePrepare' => true,
+			'username' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
 		),
@@ -83,11 +91,22 @@ return array(
 			),
 		),
 	),
-
+    /* Define if needs to close site on technical maintenance
+    'catchAllRequest'=>array(
+        'site/index',
+    ),
+    */
+    /* Define for mapping custom controller
+     'controllerMap' => array(
+        'user'=>array(
+            'class'=>'admin.userController',
+            'pageTitle'=>'something new',
+     ),
+    ),*/
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'lex24@ukr.net',
 	),
 );

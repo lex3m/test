@@ -8,6 +8,16 @@ class UserController extends Controller
 	 */
 	public $layout='//layouts/column2';
 
+    /**
+     * @return array custom actions
+     */
+    public function actions()
+    {
+        return array(
+            'show' => 'application.controllers.admin.user.ReadAction',
+        );
+    }
+
 	/**
 	 * @return array action filters
 	 */
@@ -28,7 +38,7 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','show'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
