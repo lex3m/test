@@ -7,6 +7,7 @@
  */
 class UserIdentity extends CUserIdentity
 {
+
 	/**
 	 * Authenticates a user.
 	 * The example implementation makes sure if the username and password

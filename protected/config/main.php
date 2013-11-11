@@ -29,9 +29,9 @@ return array(
 		),
 		
 	),
-
 	// application components
 	'components'=>array(
+
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
@@ -53,6 +53,7 @@ return array(
 			'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
+		*/
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
 			'emulatePrepare' => true,
@@ -61,18 +62,18 @@ return array(
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
 		),
-		*/		
-		'db'=>array(
+
+		/*'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=blogoweb',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
-		),
+		),*/
 		
 		'errorHandler'=>array(
-			// use 'site/error' action to display errors
+			// use 'site/error' action to display errors - USER OUTPUT ERROR
 			'errorAction'=>'site/error',
 		),
 		'log'=>array(
@@ -103,6 +104,7 @@ return array(
             'pageTitle'=>'something new',
      ),
     ),*/
+
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
