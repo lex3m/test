@@ -1,13 +1,19 @@
 <?php
 
 // uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
+// Yii::setPathOfAlias('localnamespace','D:\Work\localnamespace');
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Blog',
+
+/*    Using controllers from namespace
+      'controllerMap' => array(
+      'test' => '\localnamespace\controllers\TestController',
+    ),
+*/
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -54,23 +60,23 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		*/
-		'db'=>array(
+		/*'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'root',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
-		),
+		),*/
 
-		/*'db'=>array(
+		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=blogoweb',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
-		),*/
+		),
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors - USER OUTPUT ERROR
