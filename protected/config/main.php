@@ -35,6 +35,7 @@ return array(
 		),
 		
 	),
+    'language' => 'ru',
 	// application components
 	'components'=>array(
 
@@ -60,23 +61,24 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		*/
-		/*'db'=>array(
+		'db'=>array(
+            'class'=>'CDbConnection',
 			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'root',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
-		),*/
+		),
 
-		'db'=>array(
+		/*'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=blogoweb',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
-		),
+		),*/
 		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors - USER OUTPUT ERROR

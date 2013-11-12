@@ -61,7 +61,29 @@ class UserController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
+        /*
+         *
+         * Constructor of queries
+            $user = Yii::app()->db->createCommand()
+            ->select('username, password')
+            ->from('{{user}}')
+            ->where('id=:id', array(':id'=>intval($id)))
+            ->queryRow();
+
+            var_dump($user);exit;
+
+         * DAO queries
+            $sql='SELECT * FROM {{user}}';
+            $users=$connection->createCommand($sql)->queryAll();
+
+         * Active Record
+            $user = User::model()->find('id',$id);
+            $user = User::model()->findByPk($id);
+
+            var_dump($user->email);
+        */
+       
+        $this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
@@ -75,7 +97,7 @@ class UserController extends Controller
 		$model=new User;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+        $this->performAjaxValidation($model);
 
 		if(isset($_POST['User']))
 		{
